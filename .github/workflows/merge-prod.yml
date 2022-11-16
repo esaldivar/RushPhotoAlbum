@@ -15,7 +15,7 @@ jobs:
 
     steps:
         - uses: actions/checkout@v2
-        - uses: esaldivar/setup-git-user@v1
+        - uses: esaldivar/fullstackTypescriptExpressReactTemplate@v1
         - uses: actions/setup-node@v1
           with:
             node-version: 16
