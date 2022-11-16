@@ -12,9 +12,10 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
-    
+
     steps:
         - uses: actions/checkout@v2
+        - uses: esaldivar/setup-git-user@v1
         - uses: actions/setup-node@v1
           with:
             node-version: 16
