@@ -19,8 +19,6 @@ jobs:
 
         - name: Configure committer
           run: git config --global user.name "Eric Saldivar"
-          run: git config --global user.email "esaldivar1214@gmail.com"
-
 
         - name: Setup node
           uses: actions/setup-node@v1
