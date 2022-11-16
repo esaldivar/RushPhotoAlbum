@@ -14,10 +14,21 @@ jobs:
 
 
     steps:
-        - uses: actions/checkout@v2
-        - uses: esaldivar/fullstackTypescriptExpressReactTemplate
-        - uses: actions/setup-node@v1
+        - name: Checkout branch
+          uses: actions/checkout@v2
+
+        - name: Configure committer
+          run: git config --global user.name "Eric Saldivar"
+          run: git config --global user.email "esaldivar1214@gmail.com"
+
+
+        - name: Setup node
+          uses: actions/setup-node@v1
           with:
             node-version: 16
-        - run: yarn install --frozen-lockfile
-        - run: yarn release
+
+        - name: Install from yarn lock file
+          run: yarn install --frozen-lockfile
+
+        - name: Run yarn release and update version
+          run: yarn release
