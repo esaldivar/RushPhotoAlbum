@@ -1,9 +1,15 @@
 {
+  "name": "fullstacktemplate",
+  "version": "1.1.0",
+  "description": "A web development template",
+  "main": "index.js",
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "release": "standard-version"
   },
   "devDependencies": {
-    "cz-conventional-changelog": "3.3.0"
+    "cz-conventional-changelog": "3.3.0",
+    "standard-version": "^9.5.0"
   },
   "config": {
     "commitizen": {
