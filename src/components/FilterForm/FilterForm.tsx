@@ -43,7 +43,7 @@ const FilterForm = ({
         variant="outlined"
       />
       {albumId > 0 && !error && (
-        <h1>Current showing results for Album ID: {albumId}</h1>
+        <h1>Showing results for Photo Album: {albumId}</h1>
       )}
       {error && (
         <Snackbar

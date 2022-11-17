@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import { AlbumI } from "./utils/interfaces";
 import axios from "axios";
 import FilterForm from "./components/FilterForm/FilterForm";
+import ImageList from "./components/ImageList/ImageList";
 import styled from "./App.module.css";
 
 const App = () => {
   const [album, setAlbum] = useState<AlbumI[]>([]);
   const [error, setError] = useState<string>("");
   const [alert, setAlert] = useState<boolean>(false);
+  const [filtered, setFiltered] = useState<boolean>(false);
 
   const fetchAllAlbums = () => {
     axios
@@ -41,6 +43,7 @@ const App = () => {
           setAlert(false);
           setAlbum(res.data);
           setError("");
+          setFiltered(true);
         }
       })
       .catch((e) => {
@@ -64,13 +67,7 @@ const App = () => {
         alert={alert}
         closeAlert={setAlert}
       />
-      {album.map((album) => (
-        <div key={album.id}>
-          <p>
-            photo-album {album.albumId} {`[${album.id}]`} {album.title}
-          </p>
-        </div>
-      ))}
+      {album.length > 0 && <ImageList images={album} filtered={filtered} />}
     </div>
   );
 };
