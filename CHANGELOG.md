@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.9.2...v1.9.3) (2022-11-17)
+
+
+### Bug Fixes
+
+* add disable exhaustive deps for certain useEffects to allow github action to pass ([ab3dd9c](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/ab3dd9c692673dc25c06161c3607831e4720ea5e))
+
 ### [1.9.2](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.9.1...v1.9.2) (2022-11-17)
 
 ### [1.9.1](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.9.0...v1.9.1) (2022-11-17)
