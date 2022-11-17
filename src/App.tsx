@@ -7,6 +7,12 @@ import ImageList from "./components/ImageList/ImageList";
 import styled from "./App.module.css";
 import PageControl from "./components/Pagination/PageControl";
 
+/**
+ * @summary App component
+ * @description App component is the parent component of the application. It is responsible for fetching the data from the API and passing it to the child components.
+ * @returns JSX.Element
+ */
+
 const pageSize = 10;
 
 const App = () => {

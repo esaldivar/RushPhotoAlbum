@@ -6,6 +6,19 @@ import Alert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
 import styled from "./FilterForm.module.css";
 
+/**
+ * @summary FilterForm component
+ * @description FilterForm component is used to filter albums by albumId.  It also displays an error message if the albumId is not found, then an alert is displayed. If returnWholeAlbum is true, the whole album is returned and the heading text is changed to "Showing All Albums"
+ * @param albumId - albumId to filter images by
+ * @param setAlbumId - function to set albumId
+ * @param error - error message to display
+ * @param alert - boolean to determine if alert should be displayed
+ * @param closeAlert - function to close alert
+ * @param returnWholeAlbum - boolean to determine if all image details should be returned
+ * @param setReturnWholeAlbum - function to set returnWholeAlbum
+ * @returns JSX.Element
+ */
+
 const FilterForm = ({
   albumId,
   setAlbumId,
