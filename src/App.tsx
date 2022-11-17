@@ -9,8 +9,7 @@ const App = () => {
   const [error, setError] = useState<string>("");
   const [alert, setAlert] = useState<boolean>(false);
 
- 
-  const fetchAllAlbums =  () => {
+  const fetchAllAlbums = () => {
     axios
       .get(`https://jsonplaceholder.typicode.com/photos`)
       .then((res) => {
@@ -52,7 +51,7 @@ const App = () => {
   // On initial page load, all albums are fetched.
   useEffect(() => {
     fetchAllAlbums();
-  }, [])
+  }, []);
 
   return (
     <div className={styled.App}>
@@ -67,7 +66,9 @@ const App = () => {
       />
       {album.map((album) => (
         <div key={album.id}>
-          <p>photo-album {album.albumId} {`[${album.id}]`} {album.title}</p>
+          <p>
+            photo-album {album.albumId} {`[${album.id}]`} {album.title}
+          </p>
         </div>
       ))}
     </div>
