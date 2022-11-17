@@ -94,6 +94,7 @@ const App = () => {
   // On initial page load, all albums are fetched.
   useEffect(() => {
     fetchAllAlbums();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -101,6 +102,7 @@ const App = () => {
       fetchAllAlbums();
       setFiltered(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [returnWholeAlbum]);
 
   useEffect(() => {
@@ -109,6 +111,7 @@ const App = () => {
     } else {
       fetchAllAlbums();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pagination.to, pagination.from]);
 
   return (
