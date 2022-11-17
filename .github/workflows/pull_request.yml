@@ -19,12 +19,12 @@ jobs:
             node-version: 16
 
         - name: Install from yarn lock file
-           run: yarn install --frozen-lockfile
+          run: yarn install --frozen-lockfile
 
         - name: Build the image
-           run: yarn build
+          run: yarn build
 
         - name: Run tests
-           run: yarn test
+          run: yarn test
         
 
