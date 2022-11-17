@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.8.0...v1.9.0) (2022-11-17)
+
+
+### Features
+
+* add pagination to filter results and sort them in groups of 10 ([03ed38b](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/03ed38bc456659c2e2e8217f1e03a95b80895a17))
+
+
+### Tests
+
+* add unit tests for all components ([9b6f832](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/9b6f8324b8fcdf4f3f1e9905f9d3f19c9e4c12b0))
+
+
+### Code Refactoring
+
+* removed unused imports ([eea4ecf](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/eea4ecf74af2d04dbde39989662b726cea693130))
+
 ## [1.8.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.7.0...v1.8.0) (2022-11-17)
 
 
