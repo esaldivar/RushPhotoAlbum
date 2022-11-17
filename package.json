@@ -29,7 +29,7 @@
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "release": "standard-version",
     "start": "react-scripts start",
-    "test": "react-scripts test",
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!@codemirror)/\"",
     "prepare": "husky install"
   },
   "eslintConfig": {

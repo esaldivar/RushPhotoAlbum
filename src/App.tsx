@@ -10,8 +10,11 @@ const App = () => {
   const [error, setError] = useState<string>("");
   const [alert, setAlert] = useState<boolean>(false);
   const [filtered, setFiltered] = useState<boolean>(false);
+  const [returnWholeAlbum, setReturnWholeAlbum] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const fetchAllAlbums = () => {
+    setLoading(true);
     axios
       .get(`https://jsonplaceholder.typicode.com/photos`)
       .then((res) => {
@@ -19,10 +22,12 @@ const App = () => {
           setAlbum([]);
           setError("Unable to get albums. Please try again later.");
           setAlert(true);
+          setLoading(false);
         } else {
           setAlert(false);
           setAlbum(res.data);
           setError("");
+          setLoading(false);
         }
       })
       .catch((e) => {
@@ -32,6 +37,7 @@ const App = () => {
 
   // Fetch specific album by album id
   const fetchAlbum = (albumId: number) => {
+    setLoading(true);
     axios
       .get(`https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`)
       .then((res) => {
@@ -39,11 +45,14 @@ const App = () => {
           setAlbum([]);
           setError("No album found. Please try another album id.");
           setAlert(true);
+          setLoading(false);
         } else {
           setAlert(false);
           setAlbum(res.data);
           setError("");
           setFiltered(true);
+          setReturnWholeAlbum(false);
+          setLoading(false);
         }
       })
       .catch((e) => {
@@ -56,6 +65,13 @@ const App = () => {
     fetchAllAlbums();
   }, []);
 
+  useEffect(() => {
+    if (returnWholeAlbum) {
+      fetchAllAlbums();
+      setFiltered(false);
+    }
+  }, [returnWholeAlbum]);
+
   return (
     <div className={styled.App}>
       <div>
@@ -66,8 +82,10 @@ const App = () => {
         error={error}
         alert={alert}
         closeAlert={setAlert}
+        returnWholeAlbum={returnWholeAlbum}
+        setReturnWholeAlbum={setReturnWholeAlbum}
       />
-      {album.length > 0 && <ImageList images={album} filtered={filtered} />}
+      <ImageList images={album} filtered={filtered} loading={loading} />
     </div>
   );
 };

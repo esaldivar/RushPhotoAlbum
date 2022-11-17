@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import Button from "@mui/material/Button";
 import styled from "./FilterForm.module.css";
 
 interface FilterFormPropsI {
@@ -9,6 +10,8 @@ interface FilterFormPropsI {
   error?: string;
   alert?: boolean;
   closeAlert: (set: boolean) => void;
+  returnWholeAlbum: boolean;
+  setReturnWholeAlbum: (set: boolean) => void;
 }
 
 const FilterForm = ({
@@ -16,8 +19,11 @@ const FilterForm = ({
   error,
   alert,
   closeAlert,
+  returnWholeAlbum,
+  setReturnWholeAlbum,
 }: FilterFormPropsI) => {
-  const [albumId, setAlbumId] = useState<number>(0);
+  const [albumId, setAlbumId] = useState<string>("");
+  const [allHeading, setAllHeading] = useState<string>("Showing All Albums");
 
   const handleClose = (
     event: React.SyntheticEvent | Event,
@@ -29,6 +35,14 @@ const FilterForm = ({
     closeAlert(false);
   };
 
+  useEffect(() => {
+    if (error) {
+      setAllHeading("");
+    } else {
+      setAllHeading("Showing All Albums");
+    }
+  }, [error]);
+
   return (
     <div className={styled.FilterForm}>
       <TextField
@@ -37,13 +51,28 @@ const FilterForm = ({
         type="number"
         helperText="Enter the album ID"
         onChange={(e) => {
-          setAlbumId(parseInt(e.target.value));
+          setAlbumId(e.target.value);
           getAlbum(parseInt(e.target.value));
         }}
         variant="outlined"
+        value={albumId}
+        InputLabelProps={{ shrink: true }}
       />
-      {albumId > 0 && !error && (
-        <h1>Showing results for Photo Album: {albumId}</h1>
+      {parseInt(albumId) > 0 && !error && !returnWholeAlbum ? (
+        <>
+          <h1>Showing results for Photo Album: {albumId}</h1>
+          <Button
+            variant="contained"
+            onClick={() => {
+              setReturnWholeAlbum(true);
+              setAlbumId("");
+            }}
+          >
+            Return Whole Album
+          </Button>
+        </>
+      ) : (
+        <h1>{allHeading}</h1>
       )}
       {error && (
         <Snackbar
