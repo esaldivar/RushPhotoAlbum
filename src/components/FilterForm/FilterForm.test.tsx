@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import FilterForm from "./FilterForm";
 
 //test count, page Change, error
