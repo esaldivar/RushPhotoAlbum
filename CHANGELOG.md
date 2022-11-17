@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.7.0...v1.8.0) (2022-11-17)
+
+
+### Features
+
+* add loading skeleton to visualize wait for api response ([3d3125c](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/3d3125c9505d331f5be633aa33c52fb33c7f8b5a))
+
 ## [1.7.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.6.0...v1.7.0) (2022-11-17)
 
 
