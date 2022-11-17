@@ -1,20 +1,14 @@
 import { useEffect, useState } from "react";
+import { FilterFormPropsI } from "../../utils/interfaces";
 import TextField from "@mui/material/TextField";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
 import styled from "./FilterForm.module.css";
 
-interface FilterFormPropsI {
-  getAlbum: (albumId: number) => void;
-  error?: string;
-  alert?: boolean;
-  closeAlert: (set: boolean) => void;
-  returnWholeAlbum: boolean;
-  setReturnWholeAlbum: (set: boolean) => void;
-}
-
 const FilterForm = ({
+  albumId,
+  setAlbumId,
   getAlbum,
   error,
   alert,
@@ -22,7 +16,6 @@ const FilterForm = ({
   returnWholeAlbum,
   setReturnWholeAlbum,
 }: FilterFormPropsI) => {
-  const [albumId, setAlbumId] = useState<string>("");
   const [allHeading, setAllHeading] = useState<string>("Showing All Albums");
 
   const handleClose = (
