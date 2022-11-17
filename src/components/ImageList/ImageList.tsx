@@ -2,7 +2,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
-import { AlbumI } from "../../utils/interfaces";
+import { AlbumI, ImageListPropsI } from "../../utils/interfaces";
 import Skeleton from "@mui/material/Skeleton";
 import styles from "./ImageList.module.css";
 
@@ -13,12 +13,6 @@ const style = {
   border: "1px solid #DDDADA",
   padding: 0,
 };
-
-interface ImageListPropsI {
-  images: AlbumI[];
-  filtered: boolean;
-  loading: boolean;
-}
 
 const ImageList = ({ images, filtered, loading }: ImageListPropsI) => {
   return (
