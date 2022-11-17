@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import TextField from "@mui/material/TextField";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
@@ -16,6 +17,9 @@ const FilterForm = ({
   alert,
   closeAlert,
 }: FilterFormPropsI) => {
+
+  const [albumId, setAlbumId] = useState<number>(0);
+
   const handleClose = (
     event: React.SyntheticEvent | Event,
     reason?: string
@@ -34,10 +38,12 @@ const FilterForm = ({
         type="number"
         helperText="Enter the album ID"
         onChange={(e) => {
+		  setAlbumId(parseInt(e.target.value));
           getAlbum(parseInt(e.target.value));
         }}
         variant="outlined"
       />
+	  {(albumId > 0 && !error) && <h1>Current showing results for Album ID: {albumId}</h1>}
       {error && (
         <Snackbar
           open={alert}
