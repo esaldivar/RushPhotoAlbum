@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.5.0...v1.6.0) (2022-11-17)
+
+
+### Features
+
+* add on load all albums displayed and on filter display which album is being searched ([f64446c](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/f64446c3a2af595cfa3266a00b12b470affb554a))
+
 ## [1.5.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.2.0...v1.5.0) (2022-11-17)
 
 
