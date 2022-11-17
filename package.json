@@ -1,6 +1,6 @@
 {
   "name": "fullstacktemplate",
-  "version": "1.9.4",
+  "version": "1.9.5",
   "description": "A web development template",
   "private": true,
   "dependencies": {
