@@ -2,7 +2,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Divider from "@mui/material/Divider";
-import { AlbumI, ImageListPropsI } from "../../utils/interfaces";
+import { ImageListPropsI } from "../../utils/interfaces";
 import Skeleton from "@mui/material/Skeleton";
 import styles from "./ImageList.module.css";
 
@@ -18,7 +18,7 @@ const ImageList = ({ images, filtered, loading }: ImageListPropsI) => {
   return (
     <div className={styles.imageList}>
       {loading ? (
-        <List sx={style}>
+        <List sx={style} data-testid="loading-skeleton">
           <ListItem>
             <Skeleton animation="wave" width={800} height={50} />
           </ListItem>
