@@ -6,6 +6,15 @@ import { ImageListPropsI } from "../../utils/interfaces";
 import Skeleton from "@mui/material/Skeleton";
 import styles from "./ImageList.module.css";
 
+/**
+ * @summary ImageList component
+ * @description ImageList component is used to display a list of images.  If filtered is true, the items will be displayed as [id] title. If filtered is false, the items will be displayed as photo-album albumId [id] title. If loading is true, a loading skeleton will be displayed.
+ * @param images - array of image details
+ * @param filtered - boolean to determine if images are filtered
+ * @param loading - boolean to determine if images are loading
+ * @returns JSX.Element
+ */
+
 const style = {
   width: "100%",
   maxWidth: "50%",

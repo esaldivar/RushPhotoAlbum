@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.5](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.9.4...v1.9.5) (2022-11-17)
+
+
+### Docs
+
+* update components to have jsdoc comments explaining their use ([cfc17e5](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/cfc17e5cd193581eccea46623247daa14cb02ba3))
+
 ### [1.9.4](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.9.3...v1.9.4) (2022-11-17)
 
 
