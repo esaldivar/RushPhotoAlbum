@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.6.0...v1.7.0) (2022-11-17)
+
+
+### Features
+
+* add filter list component to separate photo album information ([2a76cf6](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/commit/2a76cf60c3f7644c149b9d10537e43891f9b70de))
+
 ## [1.6.0](https://github.com/esaldivar/fullstackTypescriptExpressReactTemplate/compare/v1.5.0...v1.6.0) (2022-11-17)
 
 
