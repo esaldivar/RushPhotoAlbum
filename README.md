@@ -18,13 +18,17 @@
 
 ### Local Development
 
+Clone the project and install it using the command below.  
+
+`yarn install`
+
+Run the project by using the command below.
+
 `yarn start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
 
 ### Production Build 
 
